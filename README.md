@@ -1,5 +1,7 @@
-Minecraft player MCS's Own Website!
-Contact me by e-mail: SunnyMa0423@outlook.com
-My Bilibili account: 非酋圣骑士
-啊哈哈哈哈~~~ 坤汤来喽！
-我不是小黑子，我可是爱坤时长1坤年的真爱粉！
+###新年快乐！！！###
+NEPaladin.github.io !!!!!
+非酋也能拥有的个人网站！！！
+部分内容来源网络
+
+鸣谢：h1y2(h1y2.github.io)
+非酋圣骑士，NEPaladin. 2022年12月29日

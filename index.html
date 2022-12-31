@@ -11,6 +11,7 @@
         var 数据表 = null;
         //4个参数分别是 数据库名,版本号，数据库的描述，数据库大小
         var 数据库 = openDatabase('userdata','1..0','information of user accounts',1024*1024);
+        
         //初始化页面()方法，用于页面下方表格元素的引用，并且显示所有的数据库记录
         function 初始化页面(){
              //取得下方的表格元素，并且赋值给全局变量
@@ -101,6 +102,21 @@
              }
           
              );
+          }
+         function queryData() 
+         {
+            db.transaction(tx => 
+            {
+                tx.executeSql(QUERY_USER_SQL, [],
+                    (tx, result) =>
+                    {
+                        console.log(result);
+                    },
+                    (tx, error) => 
+                    {
+                        console.log('查询失败: ' + error.message)
+                    })
+            })
           }
           
           //这个函数用于添加一条记录到数据库中，这些信息有些是从页面获得的，有些是系统生成的。

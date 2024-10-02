@@ -1,0 +1,18 @@
+{
+  "manifestType": "minecraftModpack",
+  "manifestVersion": 1,
+  "name": "[NTP] NEPaladin\u0027s TaCZ Pack",
+  "version": "1.1",
+  "author": "NEPaladin",
+  "overrides": "overrides",
+  "minecraft": {
+    "version": "1.20.1",
+    "modLoaders": [
+      {
+        "id": "fabric-0.16.5",
+        "primary": true
+      }
+    ]
+  },
+  "files": []
+}

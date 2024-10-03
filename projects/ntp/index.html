@@ -1,1 +1,254 @@
+<!DOCTYPE html>
 
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEPaladin</title>
+    <link rel="shortcut icon" href="file:///C:/Users/oscar/Desktop/NEPaladin.github.io-main/2023.png" />
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            background-image: linear-gradient(to bottom right, #70fe9b, #0066f5);
+            background-repeat: no-repeat;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        .path{
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin-left: 0.6vh;
+            margin-top: 0.6vh;
+            color: #000000;
+            height: 3.5vh;
+            width: auto;
+            font-weight: 500;
+            font-size: 2.2vh;
+            text-align: center;
+            justify-content: center;
+            padding-top: 1vh;
+            padding-left: 1.5vh;
+            padding-right: 1.5vh;
+            border: 1px solid #ffffff00;
+            border-radius: 4px;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+            transition: all 350ms;
+        }
+        
+        .patharrow{
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            color: #000000;
+            font-size: 30px;
+            padding: 0;
+            width: 13px;
+            border: 1px solid #ffffff00;
+            margin-left: 5px;
+            margin-top: 3px;
+        }
+
+        .path:hover{
+            color: #000000;
+            border: 1px solid #c7fffc;
+            background-color: #c7fff786;
+            box-shadow: 0 0px 4px rgba(0,0,0,0.5);
+            transition: all 350ms;
+        }
+
+        .pathbar{
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            position: fixed;
+            left: auto;
+            width: 87vw; 
+            height: 6vh; 
+            display: flex; 
+            align-content: center;
+            flex-direction: row; 
+            background-color: #ffffff73;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0px 8px rgba(0,0,0,0.5);
+            border: 1px solid #ffffff;
+            border-radius: 7px;
+        }
+
+        .nepaladin{
+            margin-left: 0.43vw;
+            width: 7vw;
+            height: 7vw;
+            padding: 5px 9px;
+            border: 1px solid #c5fff5;
+            border-radius: 4px;
+            margin-top: 0.43vw;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+            transition: 350ms;
+        }
+
+        .nepaladin:hover {
+            border: 1px solid #ffffff;
+            box-shadow: 0 0px 6px rgba(0,0,0,0.5);
+            transition: 350ms;
+        }
+
+
+        .indexbox{
+            position: relative;
+            display: block;
+            min-height: 1px;
+            border: 0;
+            line-height: 0;
+            background: #f5f5f6;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .sidebar{
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            position: fixed;
+            left: 2vh;
+            top: 2vh;
+            width: 9vw; 
+            height: 96vh; 
+            display: flex; 
+            align-content: center;
+            flex-direction: column; 
+            background-color: #ffffff73;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0px 8px rgba(0,0,0,0.5);
+            border: 1px solid #ffffff;
+            border-radius: 7px;
+        }
+        
+        .space{
+            height: 100vh;
+            width: 120px;
+        }
+
+        .space2{
+            height: 5px;
+            width: auto;
+        }
+
+        .space3{
+            height: 0vh;
+            width: auto;
+        }
+
+        .clickbar{ 
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+
+            width: 7vw;
+
+            margin-left: 0.43vw;
+            margin-top: 0.45vw;
+
+            padding: 5px 9px;
+
+            border: 1px solid #c5fff500;
+            border-radius: 4px;
+
+            color: #000000;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+            transition: all 350ms;
+        }
+
+        .clickbar:hover {
+            color: #000000;
+            border: 1px solid #ffffff;
+            background-color: #dedede6f;
+            box-shadow: 0 0px 6px rgba(0,0,0,0.5);
+            transition: all 350ms;
+        }
+
+        .copyright{
+            margin-top: 0.25vw;
+            margin-bottom: 0.3vw;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            height: 3em;
+            font-size: 0.6vw;
+            text-align: center;
+            color: #f9f9f9;
+        }
+
+        .main{
+            position: fixed;
+            left: 11.2vw;
+            top: 2vh;
+            flex-direction: column;
+
+            width: 88vw;
+            height: 98vh;
+        }
+
+        .container{
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            position: fixed;
+            left: auto;
+            top: 10vh;
+            width: 87vw; 
+            height: 88vh; 
+            display: flex; 
+            align-content: center;
+            flex-direction: column;
+            background-color: #ffffff73;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0px 8px rgba(0,0,0,0.5);
+            border: 1px solid #ffffff;
+            border-radius: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="https://NEPaladin.github.io/">
+            <img class="nepaladin" src="https://github.com/NEPaladin/NEPaladin.github.io/blob/main/src/icon_minimized.png?raw=true">
+        </a>
+        <a class="clickbar" href="https://NEPaladin.github.io/news">News</a>
+        <a class="clickbar" href="https://NEPaladin.github.io/projects">Projects</a>
+        <a class="clickbar" href="https://NEPaladin.github.io/tookits">Tookit</a>
+        <a class="clickbar" href="https://NEPaladin.github.io/issues">Issues</a>
+        <a class="clickbar" href="https://NEPaladin.github.io/contact">Contact</a>
+        <a class="clickbar" href="https://NEPaladin.github.io/thanks">Thanks</a>
+        <a class="space"></a>
+        <a class="clickbar settings" href="https://NEPaladin.github.io/settings">Settings</a>
+        <a class="space2"></a>
+        <span class="copyright">© 2024 NEP</span>
+    </div>
+    <div class="main">
+        <div class="pathbar">
+            <a class="path" href="https://NEPaladin.github.io/">Homepage</a>
+        </div>
+        <div class="container" style="flex-direction: column;">
+            <img src="https://github.com/NEPaladin/NEPaladin.github.io/blob/main/src/NTP.png?raw=true" style="margin-top: auto; margin-left: auto; margin-right: auto; margin-bottom: 2vh;">
+            <p1  style="text-align: center; margin-bottom: 2vh; margin-top: 0; margin-left: auto; margin-right: auto;">[NTP] NEPaladin's TaCZ Pack is now available!</p1>
+            <div style="margin-bottom: auto; margin-top: 0; margin-left: auto; margin-right: auto; flex-direction: column;">
+                <a class="clickbar" style="text-align: center; border: 1px solid #c5fff59a; margin-left: auto; margin-right: auto;" href="https://NEPaladin.github.io/projects/ntp">See more about the project</a>
+                <a class="clickbar" style="text-align: center; border: 1px solid #c5fff59a; margin-left: auto; margin-right: auto;" href="https://1drv.ms/u/s!AteOzeUI80g8gisy-9TeDewr2zel?e=yRc25w">Download</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
